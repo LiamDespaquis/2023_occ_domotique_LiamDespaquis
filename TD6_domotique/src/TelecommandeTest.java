@@ -70,15 +70,19 @@ public class TelecommandeTest {
     //Test pas finit
     @Test
     public void testActiverLampeInexistante() {
-        Lampe l = new Lampe("lampe1");
         Telecommande t = new Telecommande();
-        t.ajouterLampe(l);
+
 
         //methode testee
-        t.activerLampe(1);
+        try {
+            t.activerLampe(0);
+            assertTrue(true);
+        }
         // verification
-        boolean res = l.isAllume();
-        assertTrue(res, "la lampe doit être allumé");
+
+        catch (IndexOutOfBoundsException e1) {
+            assertTrue(false);
+        }
 
     }
 
