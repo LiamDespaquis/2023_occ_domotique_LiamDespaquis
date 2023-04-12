@@ -12,10 +12,10 @@ public class TelecommandeTest {
         Telecommande t = new Telecommande();
 
         //methode testee
-        t.ajouterLampe(l);
+        t.ajouterAppareil(l);
 
         // verification
-        assertEquals(l, t.getLampe(0), "il doit y avoir la lampe l en première position");
+        assertEquals(l, t.getAppareil(0), "il doit y avoir la lampe l en première position");
     }
 
     @Test
@@ -27,11 +27,11 @@ public class TelecommandeTest {
         Telecommande t = new Telecommande();
 
         //methode testee
-        t.ajouterLampe(l);
-        t.ajouterLampe(l2);
+        t.ajouterAppareil(l);
+        t.ajouterAppareil(l2);
 
         // verification
-        assertEquals(l2, t.getLampe(1), "il doit y avoir la lampe l2 en deuxième position");
+        assertEquals(l2, t.getAppareil(1), "il doit y avoir la lampe l2 en deuxième position");
 
     }
 
@@ -40,10 +40,10 @@ public class TelecommandeTest {
         // preparation des donnees
         Lampe l = new Lampe("lampe1");
         Telecommande t = new Telecommande();
-        t.ajouterLampe(l);
+        t.ajouterAppareil(l);
 
         //methode testee
-        t.activerLampe(0);
+        t.activerAppareil(0);
 
         // verification
         boolean res = l.isAllume();
@@ -55,11 +55,11 @@ public class TelecommandeTest {
         Lampe l = new Lampe("lampe1");
         Lampe l2 = new Lampe("lampe2");
         Telecommande t = new Telecommande();
-        t.ajouterLampe(l);
-        t.ajouterLampe(l2);
+        t.ajouterAppareil(l);
+        t.ajouterAppareil(l2);
 
         //methode testee
-        t.activerLampe(1);
+        t.activerAppareil(1);
 
         // verification
         boolean res = l2.isAllume();
@@ -75,7 +75,7 @@ public class TelecommandeTest {
 
         //methode testee
         try {
-            t.activerLampe(0);
+            t.activerAppareil(0);
             assertTrue(true);
         }
         // verification
