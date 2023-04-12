@@ -1,13 +1,13 @@
 class Television implements Appareil{
 
     /**
-     * l'intensite du son de la chaine on suppose que la chaine est eteinte si
+     * le volume du son de la television on suppose que la chaine est eteinte si
      * le son vaut 0
      */
     private int son = 0;
 
     /**
-     * permet d'allumer ou d'augmenter le son de la chaine
+     * permet d'allumer ou d'augmenter le volume de la télévision
      */
     public void allumer() {
         this.son += 10;
@@ -17,7 +17,7 @@ class Television implements Appareil{
     }
 
     /**
-     * permet d'eteindre la chaine (son mis a 0)
+     * permet d'eteindre la télévision (son mis a 0)
      */
     public void eteindre() {
         this.son = 0;
@@ -25,7 +25,7 @@ class Television implements Appareil{
     }
 
     /**
-     * surcharge de la methode affichage sous la forme "Hifi:10"
+     * surcharge de la methode affichage sous la forme "Television:10"
      *
      * @return descriptif sous forme de chaine
      */
