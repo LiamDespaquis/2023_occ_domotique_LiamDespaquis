@@ -1,0 +1,6 @@
+Question 4 :
+Ma compréhension du schéma de séquence :
+Le Main créé un chargeur du magasin, le chargeur créé un objet Magasin ainsi qu'un chargeur de CD.
+Le chargeur de CD créé un objet CD, puis extrait des pistes de la base musicbrainzSimple pour
+les ajouter au CD en tant que piste. Une fois que les pistes ont été ajoutées, le chargeur de magasin ajoute
+le CD au magasin créé
